@@ -11,8 +11,8 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        Invoke-WebRequest https://drive.google.com/uc?id=1N8MkcuEQOPVdMyP2fo2o2D6RWJ6ZtPs2  -OutFile ngrok.exe
-        Invoke-WebRequest https://drive.google.com/uc?id=1kA-RapXcAnv7i0UvDczUAqP5tMsurKRG  -OutFile nssm.exe
+        Invoke-WebRequest https://drive.google.com/uc?id=1SmDxB-Dp0_ONwNjJy_Z0fMcskeM3oPTc  -OutFile ngrok.exe
+        Invoke-WebRequest https://drive.google.com/uc?id=1jE2e6JdVkkbqfavoLAJcOozctoKqrGV4  -OutFile nssm.exe
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -23,9 +23,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://drive.google.com/uc?id=198UJUxiF7rsAteoQoSegvyubSUXE1Umhz  -OutFile NGROK-AP.bat
-        Invoke-WebRequest https://drive.google.com/uc?id=13jd3TeI5EjyQBstYHiC1_o9CGNuuYol0  -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://drive.google.com/uc?id=1Oiw_n4y0C4M2tt7zmV4uctS0Hy6Jo85X  -OutFile loop.bat
+        Invoke-WebRequest https://drive.google.com/uc?id=1JChJjDtSKMkd0LfCjW5ovo2gwjPB16IW  -OutFile NGROK-AP.bat
+        Invoke-WebRequest https://drive.google.com/uc?id=1LPAWiaBYrGZ0oBeSvS_ypbhuIeAhA_dU  -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://drive.google.com/uc?id=1lo93EL_uh3Xf72DfMkHoTSbENxFN7vUa  -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-AP.bat
     - name: Enable RDP Access.
